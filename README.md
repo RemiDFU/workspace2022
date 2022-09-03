@@ -5,8 +5,8 @@ cd web_app_interface/ContainerizingApps/vue
 
 npm install
 
-npm run build
-npm run serve OR npm run dev FOR DEV
+npm run build FOR DEV
+npm run serve FOR DEV
 
 #STEP 2 CREATE IMG DOCKER
 docker-compose up -d --build vue

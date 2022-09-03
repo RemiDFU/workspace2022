@@ -9,11 +9,11 @@ services:
       - 3001:3000
 
 
-  vue:
+  vue_application:
     build:
-      context: "vue/"
-    image: vue-app
+      context: "vue_application/"
+    image: vue_application
     env_file:
-      - "./vue/.env"
+      - "./vue_application/.env"
     ports:
       - 5001:3000
