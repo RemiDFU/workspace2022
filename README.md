@@ -1,7 +1,8 @@
 # TUTO : https://youtu.be/hqOW4TuN59M
 # ContainerizingApps
 #STEP 1 USING NODE
-cd web_app_interface/ContainerizingApps/vue
+cd web_app_interface/ContainerizingApps/vue_application
+Doc bootstrap : https://bootstrap-vue.org/docs/components/
 
 npm install
 
