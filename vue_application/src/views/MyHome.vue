@@ -7,13 +7,13 @@
 					<div class="card px-5 py-5" id="form1">
 						<div class="form-data" v-if="!submitted">
 							<div class="forms-inputs mb-4">
-								<span>Email or username</span>
-								<input autocomplete="off" type="text" />
+								<span>username</span>
+								<input autocomplete="off" type="text" v-model="this.username" />
 								<div class="invalid-feedback">A valid email is required!</div>
 							</div>
 							<div class="forms-inputs mb-4">
 								<span>Password</span>
-								<input autocomplete="off" type="password" />
+								<input autocomplete="off" type="password" v-model="this.password" />
 								<div class="invalid-feedback">
 									Password must be 8 character!
 								</div>
@@ -40,12 +40,25 @@
 
 <script>
 export default {
-    methods: {
-        getAuthentificated() {
-            this.$router.push({ name: "home" });
-        },
-    },
-    components: { }
+	data() {
+		return {
+			authentificated: false,
+			username: "",
+			password: "",
+		};
+	},
+	methods: {
+		getAuthentificated() {
+			if (this.username == "test" && this.password == "test") {
+				this.authentificated = true;
+				this.$router.push({ name: "home" });
+			} else {
+				this.authentificated = false;
+				console.log("not authentificated");
+			}
+		},
+	},
+	components: {}
 };
 </script>
 <style scoped>
