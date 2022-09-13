@@ -1,37 +1,27 @@
 <template>
-	<div class="home">
-		<h2>MyHome</h2>
-		<div class="container mt-5">
-			<div class="row d-flex justify-content-center">
+	<div class="home" style="margin-bottom: 10%;">
+		<div class="form-login-container mt-5">
+			<div class="row d-flex justify-content-center" style="width: 100%;">
 				<div class="col-md-6">
-					<div class="card px-5 py-5" id="form1">
-						<div class="form-data" v-if="!submitted">
-							<div class="forms-inputs mb-4">
-								<span>username</span>
-								<input autocomplete="off" type="text" v-model="this.username" />
-								<div class="invalid-feedback">A valid email is required!</div>
+					<main class="form-signin w-100 m-auto">
+					<form>
+						<h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+						<div class="fields-container">
+							<div class="form-floating">
+								<input type="username" class="form-control field-login" id="floatingInput" v-model="this.username"/>
+								<label for="floatingInput" class="label-input-login">Username</label>
 							</div>
-							<div class="forms-inputs mb-4">
-								<span>Password</span>
-								<input autocomplete="off" type="password" v-model="this.password" />
-								<div class="invalid-feedback">
-									Password must be 8 character!
-								</div>
+							<div class="invalid-feedback">A valid username is required</div>
+							<div class="form-floating">
+								<input type="password" class="form-control field-login" id="floatingPassword" v-model="this.password"/>
+								<label for="floatingPassword" class="label-input-login">Password</label>
 							</div>
-							<div class="mb-3">
-								<button class="btn btn-dark w-100" @click="getAuthentificated()">
-									Login
-								</button>
-							</div>
+							<div class="invalid-feedback">A valid password is required</div>
+							<button class="w-100 btn btn-lg btn-dark btn-primary btn-container" @click="getAuthentificated()">Sign in</button>
+							<p class="mt-5 mb-3 text-muted">2022</p>
 						</div>
-						<div class="success-data" v-else>
-							<div class="text-center d-flex flex-column">
-								<i class="bx bxs-badge-check"></i>
-								<span class="text-center fs-1">You have been logged in <br />
-									Successfully</span>
-							</div>
-						</div>
-					</div>
+					</form>
+					</main>
 				</div>
 			</div>
 		</div>
@@ -108,5 +98,21 @@ body {
 
 .bxs-badge-check {
 	font-size: 90px;
+}
+.fields-container {
+    width: 50%;
+    display: inline-grid;
+}
+.btn-container {
+	margin-top: 30px;
+}
+.field-login {
+	height: 90%;
+}
+.label-input-login {
+	width: 35%;
+} 
+.floatingInput {
+	padding-left: 20px;
 }
 </style>

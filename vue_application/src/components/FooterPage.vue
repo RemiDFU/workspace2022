@@ -18,6 +18,6 @@ export default {
 </script>
 <style scoped>
 .footer-page-container {
-    margin-top: 30%;
+    margin-top: 18%;
 }
 </style>

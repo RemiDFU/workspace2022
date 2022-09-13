@@ -1,7 +1,6 @@
 <template>
 	<div>
 		<HeaderComp />
-		<h1>Application page</h1>
 		<div class="router-container">
 			<router-link to="/">MyHome</router-link> |
 			<router-link to="/menu">MenuPage</router-link> |
