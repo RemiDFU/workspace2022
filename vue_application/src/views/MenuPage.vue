@@ -2,8 +2,8 @@
     <div class="menu-container">
         <div class="row">
             <h2>MenuPage</h2>
-            <button class="btn btn-dark col text-center" @click="goHome()">Go home</button>
         </div>
+        <button class="btn btn-dark col text-center" @click="goHome()">Go home</button>
     </div>
 </template>
 
@@ -15,6 +15,6 @@ export default {
             this.$router.push({ name: "home" });
         }
     },
-    components: {  }
+    components: {}
 }
 </script>

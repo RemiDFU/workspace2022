@@ -49,9 +49,11 @@ export default {
 	},
 	methods: {
 		getAuthentificated() {
+			console.log("username: " + this.username, "password: " + this.password);
+			console.log("COND IF", this.username === "test" && this.password === "test");
 			if (this.username == "test" && this.password == "test") {
 				this.authentificated = true;
-				this.$router.push({ name: "home" });
+				this.$router.push({ name: "menu" });
 			} else {
 				this.authentificated = false;
 				console.log("not authentificated");

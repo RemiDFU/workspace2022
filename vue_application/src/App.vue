@@ -1,20 +1,27 @@
 <template>
-	<h1>Application page</h1>
-	<router-link to="/">MyHome</router-link> |
-	<router-link to="/menu">MenuPage</router-link> |
-	<router-link :to="{  name: 'dynamic', params: { id: 33} }">DynamicPage</router-link>
-	<router-view />
-	<FooterPage />
+	<div>
+		<HeaderComp />
+		<h1>Application page</h1>
+		<div class="router-container">
+			<router-link to="/">MyHome</router-link> |
+			<router-link to="/menu">MenuPage</router-link> |
+			<router-link :to="{  name: 'dynamic', params: { id: 33} }">DynamicPage</router-link>
+		</div>
+		<router-view />
+		<FooterPage />
+	</div>
 </template>
 
 <script>
 import FooterPage from './components/FooterPage.vue';
+import HeaderComp from './components/HeaderComp.vue';
 
 export default {
 	name: 'App',
 	components: {
-    FooterPage
-}
+		FooterPage,
+		HeaderComp
+	}
 }
 </script>
 
@@ -25,6 +32,9 @@ export default {
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: #2c3e50;
-	margin-top: 60px;
+}
+
+.router-container {
+	display: none;
 }
 </style>
