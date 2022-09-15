@@ -4,7 +4,7 @@ FROM node:carbon-alpine as builder
 WORKDIR /usr/src/app
 COPY . ./
 RUN npm install
-RUN npm run-script build
+#RUN npm run-script build
 
 # Stage 2 - Deploy with NGNIX
 FROM nginx:1.15.2-alpine

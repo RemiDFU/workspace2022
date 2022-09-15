@@ -41,16 +41,29 @@ export default {
 		getAuthentificated() {
 			console.log("username: " + this.username, "password: " + this.password);
 			console.log("COND IF", this.username === "test" && this.password === "test");
-			if (this.username == "test" && this.password == "test") {
+			if (this.username === "test" && this.password === "test") {
 				this.authentificated = true;
+				//this.$store.mutations.isAuthenticated = true;
 				this.$router.push({ name: "menu" });
 			} else {
 				this.authentificated = false;
+				this.$store.mutations.isAuthenticated = false;
 				console.log("not authentificated");
 			}
 		},
 	},
-	components: {}
+	components: {},
+	computed: {
+		getUsers() {
+			return this.$store.state.users;
+		},
+		getAuthentificate() {
+			return this.$store.state.isAuthenticated;
+		},
+		isLoading() {
+			return this.$store.state.isLoading;
+		}
+	}
 };
 </script>
 <style scoped>

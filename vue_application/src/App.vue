@@ -20,7 +20,7 @@ export default {
 	components: {
 		FooterPage,
 		HeaderComp
-	}
+	},
 }
 </script>
 
